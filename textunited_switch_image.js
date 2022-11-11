@@ -11,14 +11,17 @@ window.addEventListener('load', (event) => {
 });
 
 
-$('[data-id="40"]').on('click', function() {
+document.querySelector('[data-id="40"]').addEventListener("click", isEnglish); 
+document.querySelector('[data-id="57"]').addEventListener("click", isGerman); 
+
+function isEnglish(){
     document.querySelector(".is-german").style.display = "none";
     document.querySelector(".is-english").style.display = "inline-block";
     alert ("Englisch");
-});
+};
 
-$('[data-id="57"]').on('click', function() {
+function isGerman(){
     document.querySelector(".is-german").style.display = "inline-block";
     document.querySelector(".is-english").style.display = "none";
     alert ("Deutsch");
-});
+};
